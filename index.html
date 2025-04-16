@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Byte Forge Robotics</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
       background-color: #1f2937;
@@ -12,168 +12,120 @@
       font-family: Arial, sans-serif;
       padding: 2rem;
     }
+
     header {
       text-align: center;
       margin-bottom: 4rem;
     }
+
     header h1 {
       font-size: 3rem;
       color: #60a5fa;
     }
+
     header p {
       font-size: 1.25rem;
       color: #d1d5db;
     }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
     }
+
     @media (min-width: 768px) {
       .grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
+
     .card {
       background-color: #1f2937;
       border: 2px solid;
-      padding: 1.0rem;
+      padding: 1.5rem;
       border-radius: 0.5rem;
+      transition: all 0.3s ease;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      color: white;
+      display: block;
     }
+
+    .card:hover {
+      background-color: white;
+      color: #1f2937;
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .card:hover p {
+      color: #1f2937;
+    }
+
     .mission { border-color: #60a5fa; }
     .team { border-color: #34d399; }
     .events { border-color: #c084fc; }
+
     .card h2 {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
     }
+
     .card p {
-      color: #d1d5db;
+      color: inherit;
+      transition: color 0.3s;
     }
-    .card:hover {
-      background-color: white;
-      color: #1f2937;
-      transform: translateY(-5px);
-    }
-    .card:hover p {
-      color: #1f2937;
-    }
+
     footer {
       text-align: center;
       margin-top: 4rem;
       color: #9ca3af;
     }
-    /* Social Icon Style from Uiverse by david-mohseni */
-    .wrapper {
-      display: inline-flex;
-      list-style: none;
-      height: 1.5rem;
-      width: 100%;
-      padding-top: 1px;
-      padding-bottom: 5px;
-      font-family: "Poppins", sans-serif;
-      justify-content: center;
+
+    footer a {
+      color: #fbbf24;
+      text-decoration: none;
     }
-    .wrapper .icon {
-      position: relative;
-      background: #fff;
-      border-radius: 50%;
-      margin: 10px;
-      width: 50px;
-      height: 50px;
-      font-size: 18px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    .wrapper .tooltip {
-      position: absolute;
-      top: 0;
-      font-size: 14px;
-      background: #fff;
-      color: #fff;
-      padding: 5px 8px;
-      border-radius: 5px;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      pointer-events: none;
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    .wrapper .tooltip::before {
-      position: absolute;
-      content: "";
-      height: 8px;
-      width: 8px;
-      background: #fff;
-      bottom: -3px;
-      left: 50%;
-      transform: translate(-50%) rotate(45deg);
-      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    }
-    .wrapper .icon:hover .tooltip {
-      top: -45px;
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-    .wrapper .icon:hover span,
-    .wrapper .icon:hover .tooltip {
-      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
-    }
-    .wrapper .instagram:hover,
-    .wrapper .instagram:hover .tooltip,
-    .wrapper .instagram:hover .tooltip::before {
-      background: #e4405f;
-      color: #fff;
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXN0PA9eUlf2BoZ+M97NncLsHnOQelOxayzE5VRgZJzzmBL0La3RQn5c5EYmGJjAvWDCueQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+
   <header>
     <h1>Byte Forge Robotics</h1>
     <p>Building bots, forging futures.</p>
   </header>
 
   <main class="grid">
-    <div class="card mission">
+    <!-- Mission Card as Styled Link -->
+    <a href="mission.html" class="card mission">
       <h2>Our Mission</h2>
       <p>At Byte Forge, we aim to inspire creativity and innovation through robotics, preparing students for a tech-driven world.</p>
-    </div>
+    </a>
 
-    <div class="card team">
+    <!-- Team Card as Link -->
+    <a href="team.html" class="card team">
       <h2>Meet the Team</h2>
       <p>A passionate group of students, mentors, and engineers working together to learn, build, and compete.</p>
-    </div>
+    </a>
 
-    <div class="card events">
+    <!-- Events Card as Link -->
+    <a href="events.html" class="card events">
       <h2>Events</h2>
       <p>Follow our journey through competitions, showcases, and community outreach events.</p>
-    </div>
+    </a>
   </main>
 
   <footer>
     <h2>Contact Us</h2>
     <p>Have questions or want to get involved? Reach out at 
-      <a href="mailto:byteforgerobotics@gmail.com" style="color:#fbbf24">byteforgerobotics@gmail.com</a>.
+      <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>.
     </p>
-    <!--
-    <ul class="wrapper">
-      <li class="icon instagram">
-        <span class="tooltip">Instagram</span>
-        <a href="https://www.instagram.com/your_instagram_handle" target="_blank" rel="noopener noreferrer" style="color: inherit;">
-          <i class="fab fa-instagram" style="font-size: 24px;"></i>
-        </a>
-      </li>
-    </ul>
-    -->
     <p style="margin-top: 1rem;">© <script>document.write(new Date().getFullYear());</script> Byte Forge Robotics. All rights reserved.</p>
   </footer>  
+
 </body>
 </html>
