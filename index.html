@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ByteForge Robotics</title>
+  <title>Byte Forge Robotics</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     body {
@@ -39,6 +39,8 @@
       border: 2px solid;
       padding: 1.0rem;
       border-radius: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     }
     .mission { border-color: #60a5fa; }
     .team { border-color: #34d399; }
@@ -50,12 +52,19 @@
     .card p {
       color: #d1d5db;
     }
+    .card:hover {
+      background-color: white;
+      color: #1f2937;
+      transform: translateY(-5px);
+    }
+    .card:hover p {
+      color: #1f2937;
+    }
     footer {
       text-align: center;
       margin-top: 4rem;
       color: #9ca3af;
     }
-
     /* Social Icon Style from Uiverse by david-mohseni */
     .wrapper {
       display: inline-flex;
@@ -128,7 +137,7 @@
 </head>
 <body>
   <header>
-    <h1>ByteForge Robotics</h1>
+    <h1>Byte Forge Robotics</h1>
     <p>Building bots, forging futures.</p>
   </header>
 
@@ -164,7 +173,7 @@
       </li>
     </ul>
     -->
-    <p style="margin-top: 1rem;">ByteForge Robotics.</p>
+    <p style="margin-top: 1rem;">© <script>document.write(new Date().getFullYear());</script> Byte Forge Robotics. All rights reserved.</p>
   </footer>  
 </body>
 </html>
