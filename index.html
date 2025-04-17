@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ByteForge Robotics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      background-color: #1f2937;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: #60a5fa;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: #d1d5db;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background-color: #1f2937;
+      border: 2px solid;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .card:hover {
+      background-color: white;
+      color: #1f2937;
+      transform: translateY(-5px) scale(1.02);
+    }
+
+    .card:hover p {
+      color: #1f2937;
+    }
+
+    .mission { border-color: #60a5fa; }
+    .team { border-color: #34d399; }
+    .events { border-color: #c084fc; }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: inherit;
+      transition: color 0.3s;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: #9ca3af;
+    }
+
+    footer a {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Byte Forge Robotics</h1>
+    <p>Building bots, forging futures.</p>
+  </header>
+
+  <main class="grid">
+    <!-- Mission Card as Styled Link -->
+    <a href="mission.html" class="card mission">
+      <h2>Our Mission</h2>
+      <p>At Byte Forge, we aim to inspire creativity and innovation through robotics, preparing students for a tech-driven world.</p>
+    </a>
+
+    <!-- Team Card as Link -->
+    <a href="team.html" class="card team">
+      <h2>Meet the Team</h2>
+      <p>A passionate group of students, mentors, and engineers working together to learn, build, and compete.</p>
+    </a>
+
+    <!-- Events Card as Link -->
+    <a href="events.html" class="card events">
+      <h2>Events</h2>
+      <p>Follow our journey through competitions, showcases, and community outreach events.</p>
+    </a>
+  </main>
+
+  <footer>
+    <h2>Contact Us</h2>
+    <p>Have questions or want to get involved? Reach out at 
+      <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>.
+    </p>
+    <p>ByteForge Robotics.</p>
+  </footer>  
+
+</body>
+</html>
