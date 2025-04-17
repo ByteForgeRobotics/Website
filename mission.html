@@ -11,19 +11,25 @@
       color: white;
       font-family: Arial, sans-serif;
       padding: 2rem;
+      margin: 0;
     }
+
     header {
       text-align: center;
       margin-bottom: 2rem;
     }
+
     header h1 {
       font-size: 3rem;
       color: #60a5fa;
+      margin-bottom: 0.25rem;
     }
+
     header p {
       font-size: 1.25rem;
       color: #d1d5db;
     }
+
     .content {
       max-width: 900px;
       margin: auto;
@@ -31,18 +37,29 @@
       border: 2px solid #60a5fa;
       padding: 2rem;
       border-radius: 0.75rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      perspective: 1000px;
+      transform-style: preserve-3d;
     }
+
+    .content:hover {
+      transform: rotateY(8deg) rotateX(4deg) scale(1.03);
+      box-shadow: 0 12px 24px rgba(255, 191, 36, 0.4);
+    }
+
     .content h2 {
       font-size: 2rem;
       color: #60a5fa;
       margin-bottom: 1rem;
     }
+
     .content p {
       font-size: 1.1rem;
       color: #d1d5db;
       line-height: 1.7;
     }
+
     .back-button {
       display: inline-block;
       margin-top: 2rem;
@@ -56,15 +73,43 @@
       text-decoration: none;
       transition: all 0.3s ease;
     }
+
     .back-button:hover {
       background-color: white;
       color: #1f2937;
       transform: translateY(-3px);
     }
+
     footer {
       text-align: center;
       margin-top: 4rem;
       color: #9ca3af;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #fbbf24;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .social-icons a {
+      color: #fbbf24;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fcd34d;
     }
   </style>
 </head>
@@ -96,8 +141,16 @@
   </section>
 
   <footer>
+    <h2>Contact Us</h2>
+    <p>Have questions or want to get involved? Reach out at 
+      <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>.
+    </p>
+    <div class="social-icons">
+      <a href="https://instagram.com/byteforge" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/ByteForgeRobotics" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
     <p>Byte Forge Robotics</p>
-  </footer>
+  </footer>  
 
 </body>
 </html>
