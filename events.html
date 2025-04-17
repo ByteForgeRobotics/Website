@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Events - Byte Forge Robotics</title>
+  <title>Meet the Team - Byte Forge Robotics</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
     body {
       background-color: #1f2937;
       color: white;
       font-family: Arial, sans-serif;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      padding: 2rem;
     }
 
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      margin-bottom: 3rem;
     }
 
     header h1 {
@@ -31,30 +28,62 @@
       color: #d1d5db;
     }
 
-    .main-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      margin-top: 3rem;
-      margin-bottom: auto;
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .no-events {
-      font-size: 1.2rem;
-      color: #9ca3af;
+    @media (min-width: 768px) {
+      .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .team-card {
+      background-color: #111827;
+      border: 2px solid #34d399;
+      border-radius: 0.5rem;
+      padding: 1.5rem;
       text-align: center;
-      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
-    .no-events i {
-      font-size: 2.5rem;
-      color: #f87171;
-      margin-bottom: 0.5rem;
+    .team-card:hover {
+      background-color: white;
+      color: #1f2937;
+      transform: scale(1.03);
+    }
+
+    .team-card img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 9999px;
+      border: 4px solid #34d399;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .team-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.4rem;
+    }
+
+    .team-card p {
+      font-size: 1rem;
+      color: #d1d5db;
+    }
+
+    .team-card:hover p {
+      color: #1f2937;
     }
 
     a.button-back {
       display: inline-block;
+      margin-top: 3rem;
       padding: 0.75rem 1.25rem;
       background-color: #34d399;
       color: #1f2937;
@@ -70,7 +99,7 @@
 
     footer {
       text-align: center;
-      padding: 1rem;
+      margin-top: 4rem;
       color: #9ca3af;
     }
 
@@ -87,16 +116,33 @@
 <body>
 
   <header>
-    <h1>Upcoming Events</h1>
-    <p>Where to find Byte Forge Robotics in action</p>
+    <h1>Meet the Team</h1>
+    <p>The minds behind Byte Forge Robotics</p>
   </header>
 
-  <div class="main-content">
-    <div class="no-events">
-      <i class="fas fa-calendar-times"></i><br/>
-      No events currently planned. Check back soon!
+  <section class="team-grid">
+    <div class="team-card">
+      <img src="ryansigma.jpg" alt="Ryan Hall" />
+      <h3>Ryan Hall</h3>
+      <p>Lead Programmer, Drive Team Coach</p>
     </div>
 
+    <div class="team-card">
+      <img src="isaacsigma.jpg" alt="Isaac Navarro" />
+      <h3>Isaac Navarro</h3>
+      <p>Co-Captain, Head Driver</p>
+    </div>
+
+    <div class="team-card">
+      <img src="annarellasigma.jpg" alt="Annarella Cerrone" />
+      <h3>Annarella Cerrone</h3>
+      <p>Team Captain, Outreach Coordinator</p>
+    </div>
+
+    <!-- Add more team members here -->
+  </section>
+
+  <div style="text-align: center;">
     <a class="button-back" href="index.html">← Back to Home</a>
   </div>
 
@@ -104,7 +150,7 @@
     <p>Questions? Contact us at 
       <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>
     </p>
-    <p style="margin-top: 0.5rem;">Byte Forge Robotics.</p>
+    <p style="margin-top: 1rem;">ByteForge Robotics</p>
   </footer>
 
 </body>
