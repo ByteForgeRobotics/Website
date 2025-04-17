@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Byte Forge Robotics: Building bots, forging futures. Discover our mission, meet our team, and follow our events.">
   <title>ByteForge Robotics</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <style>
@@ -11,16 +12,18 @@
       color: white;
       font-family: Arial, sans-serif;
       padding: 2rem;
+      margin: 0;
     }
 
     header {
       text-align: center;
-      margin-bottom: 4rem;
+      margin-bottom: 2rem;
     }
 
     header h1 {
       font-size: 3rem;
       color: #60a5fa;
+      margin-bottom: 0.25rem;
     }
 
     header p {
@@ -44,18 +47,23 @@
       background-color: #1f2937;
       border: 2px solid;
       padding: 1.5rem;
-      border-radius: 0.5rem;
-      transition: all 0.3s ease;
+      border-radius: 0.75rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease, color 0.3s;
       cursor: pointer;
       text-decoration: none;
       color: white;
       display: block;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      will-change: transform;
     }
 
     .card:hover {
+      transform: rotateY(8deg) rotateX(4deg) scale(1.03);
       background-color: white;
       color: #1f2937;
-      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 12px 24px rgba(255, 191, 36, 0.4);
     }
 
     .card:hover p {
@@ -80,15 +88,32 @@
       text-align: center;
       margin-top: 4rem;
       color: #9ca3af;
+      font-size: 0.9rem;
     }
 
     footer a {
       color: #fbbf24;
       text-decoration: none;
+      margin: 0 0.5rem;
     }
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .social-icons a {
+      color: #fbbf24;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fcd34d;
     }
   </style>
 </head>
@@ -100,21 +125,18 @@
   </header>
 
   <main class="grid">
-    <!-- Mission Card as Styled Link -->
     <a href="mission.html" class="card mission">
-      <h2>Our Mission</h2>
+      <h2><i class="fas fa-bolt"></i> Our Mission</h2>
       <p>At Byte Forge, we aim to inspire creativity and innovation through robotics, preparing students for a tech-driven world.</p>
     </a>
 
-    <!-- Team Card as Link -->
     <a href="team.html" class="card team">
-      <h2>Meet the Team</h2>
+      <h2><i class="fas fa-users"></i> Meet the Team</h2>
       <p>A passionate group of students, mentors, and engineers working together to learn, build, and compete.</p>
     </a>
 
-    <!-- Events Card as Link -->
     <a href="events.html" class="card events">
-      <h2>Events</h2>
+      <h2><i class="fas fa-calendar-alt"></i> Events</h2>
       <p>Follow our journey through competitions, showcases, and community outreach events.</p>
     </a>
   </main>
@@ -124,7 +146,11 @@
     <p>Have questions or want to get involved? Reach out at 
       <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>.
     </p>
-    <p>ByteForge Robotics.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/byteforgerobotics/?igsh=MTByZXY3NHRoajltOQ%3D%3D" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/ByteForgeRobotics" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <p>ByteForge Robotics</p>
   </footer>  
 
 </body>
