@@ -60,9 +60,14 @@
     }
 
     .team-card img {
-      width: 180px;
-      height: 180px;
-      object-fit: scale-down;
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      image-rendering: auto;
+      image-rendering: crisp-edges;
+      image-rendering: -webkit-optimize-contrast;
       border-radius: 9999px;
       border: 4px solid #34d399;
       margin-bottom: 1rem;
@@ -154,12 +159,6 @@
       <img src="annarellasigma.jpg" alt="Annarella Cerrone" />
       <h3>Annarella Cerrone</h3>
       <p>Team Captain, Outreach Coordinator</p>
-    </div>
-
-    <div class="team-card">
-      <img src="danielsigma.jpeg" alt="Daniel Mirshahi" />
-      <h3>Daniel Mirshahi</h3>
-      <p>Head CAD desinger</p>
     </div>
 
     <!-- Add more team members here -->
