@@ -41,12 +41,13 @@
       padding: 1.5rem;
       border-radius: 0.5rem;
       transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .event-card:hover {
       background-color: #f3f4f6;
       color: #1f2937;
-      transform: scale(1.02);
+      transform: translateY(-5px);
     }
 
     .event-card h3 {
@@ -97,15 +98,32 @@
       text-align: center;
       margin-top: 4rem;
       color: #9ca3af;
+      font-size: 0.9rem;
     }
 
     footer a {
       color: #fbbf24;
       text-decoration: none;
+      margin: 0 0.5rem;
     }
 
     footer a:hover {
       text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .social-icons a {
+      color: #fbbf24;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fcd34d;
     }
   </style>
 </head>
@@ -117,40 +135,47 @@
   </header>
 
   <section class="events-container">
-    <!---
+    <!--
     <div class="event-card">
       <h3>Robotics Expo - May 2025</h3>
       <p>Join us at the annual Robotics Expo where we'll showcase our latest designs and meet other innovative teams.</p>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Robotics+Expo+2025&dates=20250501T090000Z/20250501T170000Z&details=Join+us+at+the+annual+Robotics+Expo+where+we'll+showcase+our+latest+designs+and+meet+other+innovative+teams.&location=Expo+Center,+City+Name,+Country&sf=true&output=xml" target="_blank" class="button-back">Add to Google Calendar</a>
     </div>
 
     <div class="event-card">
       <h3>Community STEM Day - June 2025</h3>
       <p>We’ll be hosting STEM activities and demonstrations for local students and families at the city library.</p>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Community+STEM+Day+2025&dates=20250615T100000Z/20250615T150000Z&details=We’ll+be+hosting+STEM+activities+and+demonstrations+for+local+students+and+families+at+the+city+library.&location=City+Library,+City+Name,+Country&sf=true&output=xml" target="_blank" class="button-back">Add to Google Calendar</a>
     </div>
 
     <div class="event-card">
       <h3>State Championship - July 2025</h3>
       <p>Come cheer us on as we compete with the top robotics teams in the state!</p>
+      <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=State+Championship+2025&dates=20250720T080000Z/20250720T180000Z&details=Come+cheer+us+on+as+we+compete+with+the+top+robotics+teams+in+the+state!&location=State+Arena,+City+Name,+Country&sf=true&output=xml" target="_blank" class="button-back">Add to Google Calendar</a>
     </div>
-    -->
-    <div class="no-events">
-      <i class="fas fa-calendar-times"></i><br/>
-      No events currently planned. Check back soon!
-    </div>
+  -->
+  <div class="no-events">
+    <i class="fas fa-calendar-times"></i><br/>
+    No events currently planned. Check back soon!
+  </div>
+
   </section>
-
-
 
   <div style="text-align: center;">
     <a class="button-back" href="index.html">← Back to Home</a>
   </div>
 
-  <footer>
-    <p>Questions? Contact us at 
-      <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>
+  < <footer>
+    <h2>Contact Us</h2>
+    <p>Have questions or want to get involved? Reach out at 
+      <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>.
     </p>
-    <p style="margin-top: 1rem;">ByteForge Robotics</p>
-  </footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/byteforgerobotics/?igsh=MTByZXY3NHRoajltOQ%3D%3D" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/byteforge" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <p>ByteForge Robotics</p>
+  </footer>  
 
 </body>
 </html>
