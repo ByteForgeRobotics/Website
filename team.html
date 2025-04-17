@@ -48,13 +48,15 @@
       border-radius: 0.5rem;
       padding: 1.5rem;
       text-align: center;
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     }
 
     .team-card:hover {
       background-color: white;
       color: #1f2937;
-      transform: scale(1.03);
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     }
 
     .team-card img {
@@ -111,6 +113,21 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      margin: 0 0.5rem;
+      color: #fbbf24;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -150,7 +167,11 @@
     <p>Questions? Contact us at 
       <a href="mailto:byteforgerobotics@gmail.com">byteforgerobotics@gmail.com</a>
     </p>
-    <p style="margin-top: 1rem;">ByteForge Robotics</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/byteforgerobotics/?igsh=MTByZXY3NHRoajltOQ%3D%3D" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/ByteForgeRobotics" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+    </div>
+    <p style="margin-top: 1rem;">Byte Forge Robotics</p>
   </footer>
 
 </body>
